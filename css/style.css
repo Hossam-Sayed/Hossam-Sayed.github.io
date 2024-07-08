@@ -1,11 +1,11 @@
 /* Import Fonts */
-@import url(./fonts.css);
+@import url(/css/fonts.css);
 
 /* CSS Variables */
-@import url(./partials/_variables.css);
+@import url(/css/partials/_variables.css);
 
 /* Global Styling */
-@import url(./partials/_global.css);
+@import url(/css/partials/_global.css);
 
 /* Start Navigation */
 
