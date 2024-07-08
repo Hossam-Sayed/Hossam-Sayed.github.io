@@ -16,15 +16,17 @@
     font: normal 500 49px/60px var(--poppins);
 }
 
-@media (max-width: 460px) {
+@media screen and (max-width: 460px) {
     .section-title {
-        width: 100%;
-        text-align: left;
-        justify-self: start;
-        grid-column: 1 / -1;
         letter-spacing: 25px;
-        color: var(--title-color);
         font: normal 500 25px var(--poppins);
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .section-title {
+        letter-spacing: 20px;
+        font: normal 500 20px var(--poppins);
     }
 }
 

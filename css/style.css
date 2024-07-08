@@ -223,7 +223,6 @@
     transition: transform 0.25s, box-shadow 0.25s, background-color 0.25s;
     position: relative;
     overflow: hidden;
-    max-height: 200px;
 }
 
 @media (max-width: 1024px) {
@@ -349,8 +348,8 @@
 }
 
 .site-main .projects-area .card-img {
-    width: 328px;
-    height: 328px;
+    max-width: 328px;
+    max-height: 328px;
     padding: 2rem;
     border-radius: 1.5rem;
     background: var(--background);
@@ -360,7 +359,7 @@
     left: 0;
     right: 0;
     opacity: 0;
-    width: 280px;
+    max-width: 280px;
     bottom: -9rem;
     position: absolute;
     margin-inline: auto;
@@ -529,7 +528,7 @@
 
 .site-main .skills-area .content {
     z-index: 1;
-    width: 310px;
+    max-width: 310px;
     height: 64px;
     position: relative;
     transform: translateY(0);
@@ -570,7 +569,7 @@
 .site-main .skills-area .skill-container:hover .content>p {
     opacity: 1;
     overflow: visible;
-    max-height: 100px;
+    max-height: 100%;
 }
 
 /* End Skills Area */
