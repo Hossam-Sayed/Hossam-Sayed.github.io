@@ -223,6 +223,7 @@
     transition: transform 0.25s, box-shadow 0.25s, background-color 0.25s;
     position: relative;
     overflow: hidden;
+    max-height: 200px;
 }
 
 @media (max-width: 1024px) {
@@ -349,7 +350,7 @@
 
 .site-main .projects-area .card-img {
     max-width: 328px;
-    max-height: 328px;
+    height: 100%;
     padding: 2rem;
     border-radius: 1.5rem;
     background: var(--background);
@@ -365,48 +366,53 @@
     margin-inline: auto;
     border-radius: 1rem;
     padding: 1.5rem 2rem;
-    transition: opacity 1s 1s;
+    transition: opacity .5s .5s;
     box-shadow: var(--shadow-color);
     background-color: var(--title-color);
-}
-
-.site-main .projects-area .card-description {
-    display: block;
-    font-size: .813rem;
-    margin-bottom: .25rem;
-    color: var(--text-color);
+    font-family: var(--poppins);
 }
 
 .site-main .projects-area .card-title {
     font-weight: 500;
     font-size: 1.25rem;
+    font-weight: 500;
     margin-bottom: .75rem;
 }
 
+.site-main .projects-area .card-description {
+    display: block;
+    font-size: 12px;
+}
+
+.site-main .projects-area .card-data p {
+    margin-top: 4px;
+    margin-bottom: 0px;
+    font-size: 11px;
+    color: var(--text-color);
+}
+
 .site-main .projects-area .card-button {
-    /* text-decoration: none; */
+    font-size: 11px;
     font-weight: 500;
-    font-size: .813rem;
-    /* color: var(--primary-color); */
 }
 
 /* Naming animations in hover */
 .site-main .projects-area .card-article:hover .card-data {
     opacity: 1;
-    transition: opacity .3s;
-    animation: show-data 1s forwards;
+    transition: opacity .5s;
+    animation: show-data .5s forwards;
 }
 
 .site-main .projects-area .card-article:hover {
-    animation: remove-overflow 2s forwards;
+    animation: remove-overflow 1s forwards;
 }
 
 .site-main .projects-area .card-article:not(:hover) {
-    animation: show-overflow 2s forwards;
+    animation: show-overflow 1s forwards;
 }
 
 .site-main .projects-area .card-article:not(:hover) .card-data {
-    animation: remove-data 1s forwards;
+    animation: remove-data .5s forwards;
 }
 
 /* Card animation */
@@ -505,6 +511,7 @@
     border-radius: 15px;
     color: var(--title-color);
     background: var(--background);
+    transition: height .3s ease-in-out; /* Transition for height */
 }
 
 .site-main .skills-area .card-container {
@@ -521,7 +528,7 @@
     height: 100%;
     position: absolute;
     border-radius: 15px;
-    transition: all .3s ease-in;
+    transition: all .3s ease-in-out;
     clip-path: circle(10% at 0% 0%);
     background: var(--primary-color);
 }
@@ -529,19 +536,16 @@
 .site-main .skills-area .content {
     z-index: 1;
     max-width: 310px;
-    height: 64px;
     position: relative;
-    transform: translateY(0);
-    transition: all .3s ease-in;
+    transition: all .3s ease-in-out;
 }
 
-.site-main .skills-area .content>p {
+.site-main .skills-area .content > p {
     opacity: 0;
     max-height: 0;
-    margin-top: 16px;
     margin-bottom: 0;
     overflow: hidden;
-    transition: all .3s ease-in;
+    transition: all .3s ease-in-out;
 }
 
 .content .header {
@@ -560,17 +564,17 @@
 }
 
 .site-main .skills-area .skill-container:hover .content {
-    height: 100%;
-    padding-top: 20px;
+    height: auto;
     color: var(--title-color);
-    transform: translateY(-20px);
 }
 
-.site-main .skills-area .skill-container:hover .content>p {
+.site-main .skills-area .skill-container:hover .content > p {
     opacity: 1;
-    overflow: visible;
-    max-height: 100%;
+    margin-top: 8px;
+    max-height: 100px;
 }
+
+
 
 /* End Skills Area */
 
