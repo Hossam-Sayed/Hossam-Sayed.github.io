@@ -88,6 +88,26 @@
     justify-content: center;
 }
 
+.banner-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0), #1b1f24);
+}
+
+.banner-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #1b1f24);
+}
+
 .banner-image-circle {
     top: 50%;
     left: 50%;
@@ -101,11 +121,10 @@
 }
 
 /* Responsive styles */
-/* Responsive styles */
 
 @media (max-width: 992px) {
     .site-main .site-banner .site-title {
-        padding: 5vh;
+        margin-bottom: 16px;
     }
 
     .banner-image-circle {
@@ -123,24 +142,22 @@
 
 @media (max-width: 768px) {
     .site-main .site-banner .site-title {
-        padding: 5vh;
         text-align: center;
     }
 
     .site-main .site-banner .site-title h1 {
         font-size: 3rem;
+        line-height: 16px;
     }
 
     .site-main .site-banner .site-title h3,
     .site-main .site-banner .site-title h4 {
         font-size: 1.25rem;
+        margin-bottom: 0;
     }
 
     .site-main .site-banner .site-title h3::after {
-        width: 50%;
-        margin-left: 0;
-        display: block;
-        margin: 0.5rem auto 0;
+        display: none;
     }
 
     .site-main .site-banner .site-buttons {
@@ -162,9 +179,9 @@
         width: 80%;
     }
 
-    .banner-image {
+    /* .banner-image {
         margin-bottom: 2rem;
-    }
+    } */
 }
 
 @media (max-width: 576px) {
@@ -511,7 +528,8 @@
     border-radius: 15px;
     color: var(--title-color);
     background: var(--background);
-    transition: height .3s ease-in-out; /* Transition for height */
+    transition: height .3s ease-in-out;
+    /* Transition for height */
 }
 
 .site-main .skills-area .card-container {
@@ -540,7 +558,7 @@
     transition: all .3s ease-in-out;
 }
 
-.site-main .skills-area .content > p {
+.site-main .skills-area .content>p {
     opacity: 0;
     max-height: 0;
     margin-bottom: 0;
@@ -568,7 +586,7 @@
     color: var(--title-color);
 }
 
-.site-main .skills-area .skill-container:hover .content > p {
+.site-main .skills-area .skill-container:hover .content>p {
     opacity: 1;
     margin-top: 8px;
     max-height: 100px;
