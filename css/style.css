@@ -408,6 +408,43 @@
     color: var(--text-color);
 }
 
+.site-main .projects-area .card-data .kotlin {
+    color: var(--kotlin);
+}
+
+.site-main .projects-area .card-data .kotlin::before {
+    background-color: var(--kotlin);
+}
+
+.site-main .projects-area .card-data .dart {
+    color: var(--dart);
+}
+
+.site-main .projects-area .card-data .dart::before {
+    background-color: var(--dart);
+}
+
+.site-main .projects-area .card-data .java {
+    color: var(--java);
+}
+
+.site-main .projects-area .card-data .java::before {
+    background-color: var(--java);
+}
+
+.site-main .projects-area .card-data .language {
+    font: normal 500 11px var(--poppins);
+}
+
+.site-main .projects-area .card-data .language::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 4px;
+    border-radius: 50%;
+}
+
 .site-main .projects-area .card-button {
     font-size: 11px;
     font-weight: 500;

@@ -26,6 +26,12 @@ body {
     --shadow-color: 0px 10px 30px rgba(118, 85, 225, 0.3);
     --box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
 
+
+    /* Languages */
+    --kotlin: #a97bff;
+    --java: #b07219;
+    --dart: #00b4ab;
+
     /* Font family variables */
     --poppins: 'Poppins', cursive;
 }
